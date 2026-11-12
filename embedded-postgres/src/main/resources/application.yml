@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: embedded-postgres
+  main:
+    web-application-type: none
+    keep-alive: true
+
+embedded:
+  postgres:
+    host: ${POSTGRES_HOST:127.0.0.1}
+    port: ${POSTGRES_PORT:5432}
+    data-directory: ${POSTGRES_DATA_DIRECTORY:./data/postgres}

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: embedded-kafka
+  main:
+    web-application-type: none
+
+embedded:
+  kafka:
+    bind-host: ${KAFKA_BIND_HOST:127.0.0.1}
+    advertised-host: ${KAFKA_ADVERTISED_HOST:localhost}
+    port: ${KAFKA_PORT:9092}
+    controller-port: ${KAFKA_CONTROLLER_PORT:9093}
+    partitions: ${KAFKA_PARTITIONS:1}
+    data-directory: ${KAFKA_DATA_DIRECTORY:./data/kafka}

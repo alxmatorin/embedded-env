@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: postgres-test
+  main:
+    web-application-type: none
+  datasource:
+    url: ${POSTGRES_JDBC_URL:jdbc:postgresql://localhost:5432/postgres}
+    username: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD:postgres}
+    hikari:
+      initialization-fail-timeout: -1
+      connection-timeout: 5000
+      maximum-pool-size: 2
+      minimum-idle: 0
+      data-source-properties:
+        connectTimeout: 5
+        socketTimeout: 5
+
+connection-test:
+  timeout: ${CONNECTION_TEST_TIMEOUT:5s}

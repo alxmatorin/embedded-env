@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: ignite-test
+  main:
+    web-application-type: none
+
+app:
+  ignite:
+    addresses: ${IGNITE_ADDRESSES:localhost:10800}
+
+connection-test:
+  timeout: ${CONNECTION_TEST_TIMEOUT:5s}
+  cache: ${CONNECTION_TEST_CACHE:connection-test}

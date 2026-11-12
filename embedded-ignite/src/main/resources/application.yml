@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: embedded-ignite
+  main:
+    web-application-type: none
+
+embedded:
+  ignite:
+    host: ${IGNITE_HOST:127.0.0.1}
+    port: ${IGNITE_PORT:10800}
+    discovery-port: ${IGNITE_DISCOVERY_PORT:47500}
+    communication-port: ${IGNITE_COMMUNICATION_PORT:47100}
+    persistence-enabled: ${IGNITE_PERSISTENCE_ENABLED:false}
+    work-directory: ${IGNITE_WORK_DIRECTORY:./data/ignite}
